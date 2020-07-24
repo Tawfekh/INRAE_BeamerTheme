@@ -1,0 +1,31 @@
+#=fguillaume========================================================
+# Ce dossier contient un thème beamer suivant la charte graphique de
+# l'INRAe
+#===================================================================
+# Time-stamp: <2013-04-09 08:49:24 (francois)>
+
+--------------------------------------------------------------------
+Utilisation :
+--------------------------------------------------------------------
+
+Pour utiliser ce theme, il vous suffit de copier les fichiers sty et
+png de cette archive dans le répertoire contenant votre code source
+LaTeX et d'ajouter l'instruction \includetheme{INRA} dans votre
+préambule.
+
+Un exemple de code source LaTeX est fourni : INRA-Beamer-template.tex
+
+--------------------------------------------------------------------
+Contenu du repertoire :
+--------------------------------------------------------------------
+
+ * beamerthemeINRA.sty :
+ Ce fichier est le fichier de style appelé par beamer. Il appelle à son tour les outertheme et colortheme.		
+ * beamerouterthemeINRA.sty :
+ Ce fichier définit les images de fonds, ainsi que la disposition des informations sur la diapo
+ * beamercolorthemeINRA.sty :
+ Ce fichier définit les couleurs de la charte graphique.
+ * bgINRA1.png :
+ Ce fichier est utilisé comme image de fond pour la première diapo
+ * bgINRA2.png :
+ Ce fichier est utilisé comme image de fond pour les autres diapos

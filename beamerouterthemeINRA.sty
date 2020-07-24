@@ -1,0 +1,65 @@
+\ProvidesPackage{beamerouterthemeINR}[2013/02/20]
+
+% Beamer theme by François Guillaume
+% based on the LaTeX-Beamer package :
+% Copyright 2003 by Till Tantau <tantau@users.sourceforge.net>
+%
+% This program can be redistributed and/or modified under the terms
+% of the GNU Public License, version 2.
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Background 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setbeamertemplate{background canvas}{%
+  \ifnum\c@framenumber=1%1ere slide
+  \includegraphics[width=\paperwidth,height=\paperheight]{bgINRAe1}
+  \else%Autres slides
+  \includegraphics[width=\paperwidth,height=\paperheight]{bgINRAe2}
+  \fi%
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Footline
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\defbeamertemplate*{footline}{INRA theme}{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=15 pt,leftskip=1.7cm,dp=1ex]{structure.fg}%
+   \parbox{.2\paperwidth}{\color{INRA@dinst}\inserttitle \\ \color{INRA@linst}\insertauthor \textbackslash \color{INRA@linst}\insertdate\par}
+  \end{beamercolorbox}
+  }%
+  \vskip3pt%
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Page de titre
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\defbeamertemplate*{title page}{INRATitle}{
+  \vspace{0.26 \paperheight}%
+  \hspace{0.137 \linewidth}%
+  {\color{white}\huge\bf\textsc{\inserttitle}}
+  \ifx\insertsubtitle\@empty\\[\baselineskip]
+  \else{\\ \hspace{0.137 \linewidth} \color{INRA@cinst}\insertsubtitle}\\[\baselineskip]
+  \fi
+  \vfill
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Titre de frame
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setbeamertemplate{frametitle}{
+  \vspace{0.057 \paperheight}%
+  \hspace{0.065 \linewidth}%
+  \bf\textsc{\insertframetitle}
+  }
+
+\makeatother

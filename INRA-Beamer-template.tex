@@ -1,0 +1,92 @@
+\documentclass[compress,10pt]{beamer}
+% version imprimable pour assistance
+%\documentclass[10pt, green, handout]{beamer}
+\usepackage[T1]{fontenc}
+\usepackage[default]{raleway}
+\usepackage[utf8]{inputenc}
+\usepackage[frenchb]{babel} % le document est en français
+\usepackage{amsmath}
+\usepackage{graphicx}       % pour insérer des figures
+\usepackage{xcolor}         % pour définir plus de couleurs
+\usetheme{INRA}  %Applique le theme INRA (ce dernier doit être present dans le repertoire courant)
+%-------------------------------------------------------------------------------
+% Quelques options pdf
+%-------------------------------------------------------------------------------
+\hypersetup{
+pdfpagemode = FullScreen, % afficher le pdf en plein écran
+pdfauthor   = {},%
+pdftitle    = {},%
+pdfsubject  = {},%
+pdfkeywords = {Science,Impact},%
+pdfcreator  = {PDFLaTeX,emacs,AucTeX},%
+pdfproducer = {INRA}%
+}
+
+%-------------------------------------------------------------------------------
+\title{INRA Beamer Theme}
+\subtitle{Sous-titre facultatif}
+\author{Nom de l'auteur}
+%-------------------------------------------------------------------------------
+\begin{document}
+
+%-F1------------------------------------------------------------------------------
+\begin{frame}
+  \titlepage
+\end{frame}
+\section{Debut}
+%-F2------------------------------------------------------------------------------
+\begin{frame}{Première page}
+%----------------------------------------------------------------------
+\begin{itemize}
+\item Ce thème reste simple
+\item Il ne définit que le outertheme et le colortheme
+\item Vous pouvez essayer d'ajouter d'autres options selon vos
+  habitudes et préférences
+\end{itemize} 
+{\onslide<2->
+\begin{alertblock}{Attention}
+  Ce thème n'a été que peu testé, certaines combinaisons de styles ou
+  thèmes pourraient ne pas permettre la compilation ...ou simplement
+  rendre votre présentation hideuse.
+\end{alertblock}
+}
+\end{frame}
+
+\begin{frame}[fragile]{Modifications}
+\begin{block}{Conseils}
+  \begin{enumerate}
+  \item Testez de façon incrémentalle votre code
+  \item Faites appel au thème INRA en dernier.
+  \end{enumerate}
+\end{block}
+
+{\onslide<2->
+\begin{exampleblock}{Ainsi}
+\begin{verbatim}
+\useinnertheme[shadow=true]{rounded}
+\usetheme{INRA} 
+\end{verbatim}
+\end{exampleblock}
+}
+\end{frame}
+
+\section{Fin}
+%-F3------------------------------------------------------------------------------
+\begin{frame}{Seconde page}
+%----------------------------------------------------------------------
+\begin{itemize}
+\item <1-> $\LaTeX$ permet surtout un très bon rendu des équations
+\item <2-> $ y= \mu + \sum^{n}_{i=1} \alpha_i + e  $
+\end{itemize}  
+\end{frame}
+
+\end{document}
+
+%%%Local Variables:
+%%% mode: latex
+%%% eval: (TeX-PDF-mode 1)
+%%% ispell-local-dictionary: "francais"
+%%% eval: (flyspell-mode 1)
+%%%End:
+
+
